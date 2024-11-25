@@ -1,0 +1,143 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Whitelist Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="opening.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://raw.githubusercontent.com/Sambath99/anxiety/refs/heads/main/img/logo2.png" alt="Anxiety Store Logo" class="logo">
+                <div class="logo-glow"></div>
+            </div>
+            <h1><i class="fas fa-crown"></i> Whitelist Management Dashboard</h1>
+            <p><i class="fas fa-chart-line"></i> Monitor and manage whitelisted emails</p>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <div class="stat-info">
+                    <span class="stat-number" id="totalEmails">4</span>
+                    <span class="stat-label">Total Whitelisted</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-clock"></i>
+                <div class="stat-info">
+                    <span class="stat-number" id="lastUpdate">Just Now</span>
+                    <span class="stat-label">Last Updated</span>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="search-container">
+            
+            
+            <div class="search-animation"></div>
+        </div>
+
+        <div class="whitelist-container">
+            <div class="section-header">
+                <h2><i class="fas fa-list-check"></i> Whitelisted Emails</h2>
+                <div class="header-actions">
+                    
+                    <button class="btn refresh-btn" id="refreshBtn">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="email-list" id="emailList"><div class="email-item" style="animation-delay: 0s;">
+            <div class="email-content">
+                <span class="email-number">#1</span>
+                <i class="fas fa-envelope"></i>
+                <span class="email-address">sam123zzk@gmail.com</span>
+            </div>
+            <div class="email-status">
+                <span class="status-badge">
+                    <i class="fas fa-check-circle"></i> Whitelisted
+                </span>
+                <span class="timestamp">
+                    <i class="fas fa-clock"></i> 11/11/2024
+                </span>
+            </div>
+        </div><div class="email-item" style="animation-delay: 0.1s;">
+            <div class="email-content">
+                <span class="email-number">#2</span>
+                <i class="fas fa-envelope"></i>
+                <span class="email-address">mrbeast@gmail.com</span>
+            </div>
+            <div class="email-status">
+                <span class="status-badge">
+                    <i class="fas fa-check-circle"></i> Whitelisted
+                </span>
+                <span class="timestamp">
+                    <i class="fas fa-clock"></i> 11/11/2024
+                </span>
+            </div>
+        </div><div class="email-item" style="animation-delay: 0.2s;">
+            <div class="email-content">
+                <span class="email-number">#3</span>
+                <i class="fas fa-envelope"></i>
+                <span class="email-address">gongongmeahg@gmail.com</span>
+            </div>
+            <div class="email-status">
+                <span class="status-badge">
+                    <i class="fas fa-check-circle"></i> Whitelisted
+                </span>
+                <span class="timestamp">
+                    <i class="fas fa-clock"></i> 11/11/2024
+                </span>
+            </div>
+        </div><div class="email-item" style="animation-delay: 0.3s;">
+            <div class="email-content">
+                <span class="email-number">#4</span>
+                <i class="fas fa-envelope"></i>
+                <span class="email-address">kimsoksambath8l@gmail.com</span>
+            </div>
+            <div class="email-status">
+                <span class="status-badge">
+                    <i class="fas fa-check-circle"></i> Whitelisted
+                </span>
+                <span class="timestamp">
+                    <i class="fas fa-clock"></i> 11/11/2024
+                </span>
+            </div>
+        </div></div>
+        </div>
+
+        <div class="action-container">
+            <button class="btn primary-btn glow-effect" id="sendNotification">
+                <i class="fas fa-paper-plane"></i>
+                Send Notification to All Emails
+                <span class="glow-line"></span>
+            </button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Sending notifications...</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-indicator">
+        <div class="spinner"></div>
+        <div class="loading-text">
+            <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
+        </div>
+    </div>
+
+    <div class="particles" id="particles"><div class="particle" style="left: 75.5674%; top: 97.3626%; width: 3.71551px; height: 3.71551px; animation-delay: 2.88646s;"></div><div class="particle" style="left: 88.5305%; top: 63.5159%; width: 0.383042px; height: 0.383042px; animation-delay: 2.18398s;"></div><div class="particle" style="left: 7.53787%; top: 83.9229%; width: 1.38693px; height: 1.38693px; animation-delay: 1.68454s;"></div><div class="particle" style="left: 94.8225%; top: 68.8386%; width: 4.20036px; height: 4.20036px; animation-delay: 2.26536s;"></div><div class="particle" style="left: 54.1605%; top: 91.7719%; width: 2.15963px; height: 2.15963px; animation-delay: 2.64489s;"></div><div class="particle" style="left: 9.43866%; top: 77.8609%; width: 1.5583px; height: 1.5583px; animation-delay: 1.9773s;"></div><div class="particle" style="left: 50.2167%; top: 50.4872%; width: 1.64694px; height: 1.64694px; animation-delay: 0.398285s;"></div><div class="particle" style="left: 4.79059%; top: 0.396182%; width: 2.10095px; height: 2.10095px; animation-delay: 2.80091s;"></div><div class="particle" style="left: 44.1708%; top: 41.0888%; width: 0.648341px; height: 0.648341px; animation-delay: 2.45285s;"></div><div class="particle" style="left: 22.025%; top: 68.8701%; width: 3.4699px; height: 3.4699px; animation-delay: 1.64872s;"></div><div class="particle" style="left: 78.4158%; top: 45.8177%; width: 0.130536px; height: 0.130536px; animation-delay: 2.7159s;"></div><div class="particle" style="left: 14.6698%; top: 18.2162%; width: 2.441px; height: 2.441px; animation-delay: 1.58852s;"></div><div class="particle" style="left: 25.9758%; top: 66.4773%; width: 0.0341587px; height: 0.0341587px; animation-delay: 1.639s;"></div><div class="particle" style="left: 86.6699%; top: 67.5209%; width: 4.32274px; height: 4.32274px; animation-delay: 1.56299s;"></div><div class="particle" style="left: 77.0425%; top: 5.11982%; width: 3.32083px; height: 3.32083px; animation-delay: 2.85835s;"></div><div class="particle" style="left: 67.3036%; top: 73.9022%; width: 0.756015px; height: 0.756015px; animation-delay: 1.96839s;"></div><div class="particle" style="left: 77.2044%; top: 57.8788%; width: 3.67041px; height: 3.67041px; animation-delay: 0.723575s;"></div><div class="particle" style="left: 89.3951%; top: 33.3608%; width: 3.68737px; height: 3.68737px; animation-delay: 0.938183s;"></div><div class="particle" style="left: 97.0713%; top: 35.6192%; width: 1.12676px; height: 1.12676px; animation-delay: 0.686097s;"></div><div class="particle" style="left: 82.58%; top: 90.5848%; width: 3.18493px; height: 3.18493px; animation-delay: 0.886027s;"></div><div class="particle" style="left: 70.7854%; top: 46.7323%; width: 3.85687px; height: 3.85687px; animation-delay: 0.673041s;"></div><div class="particle" style="left: 92.8681%; top: 44.1713%; width: 0.152332px; height: 0.152332px; animation-delay: 2.04576s;"></div><div class="particle" style="left: 11.6081%; top: 35.5794%; width: 4.35185px; height: 4.35185px; animation-delay: 2.57266s;"></div><div class="particle" style="left: 96.4721%; top: 9.9699%; width: 2.17271px; height: 2.17271px; animation-delay: 2.93488s;"></div><div class="particle" style="left: 2.53412%; top: 53.8206%; width: 0.720912px; height: 0.720912px; animation-delay: 2.18412s;"></div><div class="particle" style="left: 28.3683%; top: 93.1403%; width: 4.32263px; height: 4.32263px; animation-delay: 2.39631s;"></div><div class="particle" style="left: 50.9752%; top: 28.5638%; width: 3.83311px; height: 3.83311px; animation-delay: 2.98297s;"></div><div class="particle" style="left: 40.0927%; top: 79.7606%; width: 0.358842px; height: 0.358842px; animation-delay: 2.31207s;"></div><div class="particle" style="left: 66.1558%; top: 71.7627%; width: 1.82424px; height: 1.82424px; animation-delay: 0.10552s;"></div><div class="particle" style="left: 59.4011%; top: 92.6598%; width: 2.38094px; height: 2.38094px; animation-delay: 0.17461s;"></div><div class="particle" style="left: 70.1711%; top: 18.9364%; width: 0.538237px; height: 0.538237px; animation-delay: 0.551566s;"></div><div class="particle" style="left: 68.5824%; top: 13.2532%; width: 3.07959px; height: 3.07959px; animation-delay: 2.69152s;"></div><div class="particle" style="left: 81.4887%; top: 43.429%; width: 0.668493px; height: 0.668493px; animation-delay: 0.0358963s;"></div><div class="particle" style="left: 16.0505%; top: 33.9347%; width: 0.70525px; height: 0.70525px; animation-delay: 1.59487s;"></div><div class="particle" style="left: 75.6558%; top: 97.918%; width: 1.19148px; height: 1.19148px; animation-delay: 2.72992s;"></div><div class="particle" style="left: 44.1277%; top: 37.5927%; width: 1.37217px; height: 1.37217px; animation-delay: 2.93655s;"></div><div class="particle" style="left: 9.06779%; top: 87.8311%; width: 2.16486px; height: 2.16486px; animation-delay: 1.01168s;"></div><div class="particle" style="left: 14.4881%; top: 79.5311%; width: 2.65024px; height: 2.65024px; animation-delay: 2.2406s;"></div><div class="particle" style="left: 16.7716%; top: 94.4454%; width: 0.108086px; height: 0.108086px; animation-delay: 2.90923s;"></div><div class="particle" style="left: 55.9651%; top: 63.6253%; width: 2.89535px; height: 2.89535px; animation-delay: 0.830902s;"></div><div class="particle" style="left: 76.5161%; top: 34.2339%; width: 1.47845px; height: 1.47845px; animation-delay: 0.210864s;"></div><div class="particle" style="left: 72.741%; top: 61.9798%; width: 2.62632px; height: 2.62632px; animation-delay: 0.285329s;"></div><div class="particle" style="left: 31.9824%; top: 37.7479%; width: 1.87052px; height: 1.87052px; animation-delay: 1.06379s;"></div><div class="particle" style="left: 78.1581%; top: 93.5898%; width: 2.13691px; height: 2.13691px; animation-delay: 1.77522s;"></div><div class="particle" style="left: 53.6341%; top: 88.9279%; width: 4.5885px; height: 4.5885px; animation-delay: 2.79676s;"></div><div class="particle" style="left: 14.6358%; top: 14.7128%; width: 2.27832px; height: 2.27832px; animation-delay: 0.692663s;"></div><div class="particle" style="left: 43.8409%; top: 75.839%; width: 1.43788px; height: 1.43788px; animation-delay: 0.991608s;"></div><div class="particle" style="left: 33.1923%; top: 62.3799%; width: 1.10845px; height: 1.10845px; animation-delay: 1.45041s;"></div><div class="particle" style="left: 3.74325%; top: 99.8806%; width: 2.09307px; height: 2.09307px; animation-delay: 0.0358699s;"></div><div class="particle" style="left: 44.357%; top: 53.4813%; width: 2.3783px; height: 2.3783px; animation-delay: 1.14319s;"></div></div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="opening.js"></script>
+
+
+</body></html>
