@@ -335,7 +335,7 @@ ${cart.map(item => `▪️ ${item.name}
                     showToast('Payment successful!', 'success');
                     setTimeout(() => {
                         localStorage.removeItem('cart');
-                        window.location.href = 'index.html';
+                        window.location.href = 'shoptest1.html.html';
                     }, 2000);
                 }
             })
@@ -536,7 +536,7 @@ ${cart.map(item => `▪️ ${item.name}
         
         // Redirect after delay
         setTimeout(() => {
-            window.location.href = 'index.html';
+            window.location.href = 'shoptest1.html.html';
         }, 2000);
         
     } catch (error) {
