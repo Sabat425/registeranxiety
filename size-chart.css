@@ -1,0 +1,283 @@
+.size-chart-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    background-color: #fff;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.size-chart-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.02) 0%, rgba(255,255,255,0) 70%);
+    pointer-events: none;
+}
+
+.size-chart-container h1 {
+    text-align: center;
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(45deg, #000, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    animation: fadeInDown 1s ease;
+}
+
+.product-section {
+    margin-bottom: 80px;
+    position: relative;
+    animation: fadeIn 1s ease;
+}
+
+.product-section:nth-child(odd) {
+    animation: slideInLeft 1s ease;
+}
+
+.product-section:nth-child(even) {
+    animation: slideInRight 1s ease;
+}
+
+.product-section h2 {
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.product-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #000, transparent);
+    transition: all 0.5s ease;
+    transform: translateX(-50%);
+}
+
+.product-section:hover h2::after {
+    width: 100%;
+}
+
+.size-chart-item {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.size-chart-item:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.size-chart-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Updated Zoom Modal Styles */
+.zoom-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.zoom-modal.active {
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoom-modal img {
+    max-width: 95%;
+    max-height: 95vh;
+    object-fit: contain;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.zoom-modal.active img {
+    transform: scale(1);
+}
+
+.close-zoom {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 1001;
+}
+
+.close-zoom::before,
+.close-zoom::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+
+.close-zoom::before {
+    transform: rotate(45deg);
+}
+
+.close-zoom::after {
+    transform: rotate(-45deg);
+}
+
+.close-zoom:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+/* Add animation for modal opening */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.zoom-modal.active img {
+    animation: zoomIn 0.3s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .size-chart-container {
+        padding: 60px 30px;
+    }
+    
+    .size-chart-container h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .size-chart-container {
+        padding: 40px 20px;
+    }
+
+    .size-chart-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .product-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .size-chart-item {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .size-chart-container {
+        padding: 30px 15px;
+    }
+
+    .size-chart-container h1 {
+        font-size: 2rem;
+    }
+
+    .product-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .size-chart-item {
+        padding: 15px;
+        border-radius: 15px;
+    }
+}

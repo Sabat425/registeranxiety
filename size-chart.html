@@ -1,0 +1,117 @@
+<html lang="en"><head></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety - Streetwear Brand</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="size-chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="contact-icon">
+                <i class="fas fa-bars"></i>
+            </a>
+            <div class="logo">
+                <a href="index.html"><img src="/img/logo2.png" alt="Anxiety Logo"></a>
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="cart-icon1" style="z-index: 9999; position: relative;">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count1">0</span>
+            </div>
+        </nav>
+        <div class="scroll-progress"></div>
+        <div class="cart-overlay"></div>
+    </header>
+
+    <div class="cart-modal">
+        <div class="cart-content">
+            <h2>Shopping Cart</h2>
+            <div class="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+                Proceed to Checkout
+            </button>
+            <div class="cart-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="side-menu">
+        <div class="side-menu-header">
+            <h2>Menu</h2>
+            <div class="side-menu-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="side-menu-links">
+            <a href="index.html">Products</a>
+            <a href="size-chart.html">Size Chart</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="side-menu-overlay"></div>
+
+    <main class="size-chart-container">
+        <h1>Size Guide</h1>
+        
+        <div class="product-section">
+            <h2>T-Shirt</h2>
+            <div class="size-chart-item">
+                <img src="/img/A43.png" alt="T-Shirt Size Chart" class="size-chart-image">
+            </div>
+        </div>
+
+        <div class="product-section">
+            <h2>Jacket</h2>
+            <div class="size-chart-item">
+                <img src="/img/A44.png" alt="Jacket Size Chart" class="size-chart-image">
+            </div>
+        </div>
+
+        <div class="product-section">
+            <h2>Sweater</h2>
+            <div class="size-chart-item">
+                <img src="/img/A45.png" alt="Sweater Size Chart" class="size-chart-image">
+            </div>
+        </div>
+
+        <div class="product-section">
+            <h2>Pants</h2>
+            <div class="size-chart-item">
+                <img src="/img/A50.png" alt="Pants Size Chart" class="size-chart-image">
+            </div>
+        </div>
+    </main>
+
+    <!-- Updated Zoom Modal -->
+    <div class="zoom-modal">
+        <div class="close-zoom"></div>
+        <img src="" alt="Zoomed Image">
+    </div>
+
+    <script src="script.js"></script>
+    <script src="status.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="size-chart.js"></script>
+<!-- <script src="shopstatus.js"></script> -->
+
+
+
+</body></html>

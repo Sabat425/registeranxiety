@@ -1,0 +1,271 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety - Streetwear Brand</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="contact-icon">
+                <i class="fas fa-bars"></i>
+            </a>
+            <div class="logo">
+                <img src="/img/logo2.png" alt="Anxiety Logo">
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="cart-icon1" style="z-index: 9999; position: relative;">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count1">0</span>
+            </div>
+        </nav>
+        <div class="scroll-progress"></div>
+        <div class="cart-overlay"></div>
+    </header>
+
+    <div class="cart-modal">
+        <div class="cart-content">
+            <h2>Shopping Cart</h2>
+            <div class="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+                Proceed to Checkout
+            </button>
+            <div class="cart-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="side-menu">
+        <div class="side-menu-header">
+            <h2>Menu</h2>
+            <div class="side-menu-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="side-menu-links">
+            <a href="index.html">Products</a>
+            <a href="size-chart.html">Size Chart</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="side-menu-overlay"></div>
+
+    <main>
+        <section id="hoodies" class="products-section">
+
+            <div class="products-grid">
+                <div class="product-card animate" data-product-id="blacktee">
+                    <div class="product-image">
+                        <img src="detail-image/BLACK-TEE/BLACK-TEE-front.png" alt="BLACK TEE">
+                        <div class="product-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>BLACK TEE</h3>
+                        <div class="stock-status out-of-stock">
+            <i class="fas fa-times-circle"></i>
+            <span>Out of Stock</span>
+        </div>
+                        <span class="price">$25.00</span>                      
+                        <div class="size-selector">
+                             <!--    <button type="button" class="size-btn" data-size="S">S</button>
+                                <button type="button" class="size-btn" data-size="M">M</button>
+                                <button type="button" class="size-btn" data-size="L">L</button>
+                                <button type="button" class="size-btn" data-size="XL">XL</button> -->
+                        </div>
+                        <div class="product-actions">
+                         <!--  <button class="">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button> -->
+                            <button class="view-details1" onclick="window.location.href='detail-html/BLACK-TEE.html'">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                <div class="product-card animate" data-product-id="babybluettee">
+                    <div class="product-image">
+                        <img src="detail-image/BABY-BLUE-TEE/BABY-BLUE-TEE-front.png" alt="BABY BLUE TEE">
+                        <div class="product-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>BABY BLUE TEE</h3>
+                        <div class="stock-status out-of-stock">
+            <i class="fas fa-times-circle"></i>
+            <span>Out of Stock</span>
+        </div>
+                        <span class="price">$25.00</span>
+                        <div class="size-selector">
+                           <!--    <button type="button" class="size-btn" data-size="S">S</button>
+                                <button type="button" class="size-btn" data-size="M">M</button>
+                                <button type="button" class="size-btn" data-size="L">L</button>
+                                <button type="button" class="size-btn" data-size="XL">XL</button> -->
+                            </div>
+                        <div class="product-actions">
+                         <!--  <button class="">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button> -->
+                            <button class="view-details1" onclick="window.location.href='detail-html/BABY-BLUE-TEE.html'">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card animate" data-product-id="whitetee">
+                    <div class="product-image">
+                        <img src="detail-image/WHITE-TEE/WHITE-TEE-front.png" alt="WHITE TEE">
+                        <div class="product-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>WHITE TEE</h3>
+                        <div class="stock-status in-stock">
+            <i class="fas fa-check-circle"></i>
+            <span>In Stock</span>
+        </div>
+                        <span class="price">$25.00</span>
+                        <div class="size-selector">
+                            
+                        </div>
+                        <div class="product-actions">
+                          <!--  <button class="">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button> -->
+                            <button class="view-details1" onclick="window.location.href='detail-html/WHITE-TEE.html'">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card animate" data-product-id="blackcanvasjacket">
+                    <div class="product-image">
+                        <img src="detail-image/BLACK-CANVAS-JACKET/BLACK-CANVAS-JACKET-front.png" alt="BLACK CANVAS JACKET">
+                        <div class="product-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>BLACK CANVAS JACKET</h3>
+                        <div class="stock-status out-of-stock">
+            <i class="fas fa-times-circle"></i>
+            <span>Out of Stock</span>
+        </div>
+                        <span class="price">$40.00</span>
+                        <div class="size-selector">
+                             <!--    <button type="button" class="size-btn" data-size="S">S</button>
+                                <button type="button" class="size-btn" data-size="M">M</button>
+                                <button type="button" class="size-btn" data-size="L">L</button>
+                                <button type="button" class="size-btn" data-size="XL">XL</button> -->
+                        </div>
+                        <div class="product-actions">
+                         <!--  <button class="">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button> -->
+                            <button class="view-details1" onclick="window.location.href='detail-html/BLACK-CANVAS-JACKET.html'">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate" data-product-id="blacksweater">
+                    <div class="product-image">
+                        <img src="detail-image/BLACK-SWEATER/BLACK-SWEATER-front.png" alt="BLACK SWEATER">
+                        <div class="product-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>BLACK SWEATER</h3>
+                        <div class="stock-status out-of-stock">
+            <i class="fas fa-times-circle"></i>
+            <span>Out of Stock</span>
+        </div>
+                        <span class="price">$35.00</span>
+                        <div class="size-selector">
+                             <!--    <button type="button" class="size-btn" data-size="S">S</button>
+                                <button type="button" class="size-btn" data-size="M">M</button>
+                                <button type="button" class="size-btn" data-size="L">L</button>
+                                <button type="button" class="size-btn" data-size="XL">XL</button> -->
+                        </div>
+                        <div class="product-actions">
+                         <!--  <button class="">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button> -->
+                            <button class="view-details1" onclick="window.location.href='detail-html/BLACK-SWEATER.html'">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card animate" data-product-id="blacksweatpant">
+                    <div class="product-image">
+                        <img src="detail-image/BLACK-SWEATPANT/BLACK-SWEATPANT-front.png" alt="BLACK SWEAT PANT">
+                        <div class="product-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>BLACK SWEAT PANT</h3>
+                        <div class="stock-status out-of-stock">
+            <i class="fas fa-times-circle"></i>
+            <span>Out of Stock</span>
+        </div>
+                        <span class="price">$35.00</span>
+                        <div class="size-selector">
+                             <!--    <button type="button" class="size-btn" data-size="S">S</button>
+                                <button type="button" class="size-btn" data-size="M">M</button>
+                                <button type="button" class="size-btn" data-size="L">L</button>
+                                <button type="button" class="size-btn" data-size="XL">XL</button> -->
+                        </div>
+                        <div class="product-actions">
+                         <!--  <button class="">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button> -->
+                            <button class="view-details1" onclick="window.location.href='detail-html/BLACK-SWEATPANT.html'">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+      
+    </main>
+
+    
+
+    <script src="script.js"></script>
+    <script src="status.js"></script>
+    <script src="sidebar.js"></script>
+<!-- <script src="shopstatus.js"></script> -->
+
+
+
+</body></html>
