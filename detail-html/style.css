@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 body {
@@ -196,14 +198,14 @@ body {
 
 h1 {
     font-size: 2.75rem;
-    font-weight: 700;
-    color: #0f172a;
+    font-weight: 400;
+    color: #2550b4;
     line-height: 1.2;
 }
 
 .price {
     font-size: 2.5rem;
-    color: #2563eb;
+        color: #000000;
     font-weight: 700;
 }
 
@@ -275,6 +277,7 @@ h1 {
 }
 
 .add-to-cart-btn {
+    margin: 1rem 0;
     width: 100%;
     padding: 1.25rem;
     border: none;
@@ -378,7 +381,10 @@ h1 {
     }
 
     .product-details {
-        gap: 1.5rem;
+        gap: 0.5rem;
+    }
+    .add-to-cart-btn {
+        margin: 1rem 0;
     }
 
     .thumbnail-wrapper {
