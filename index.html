@@ -123,61 +123,14 @@
     <div class="container">
         <div class="message-box">
             <h1 class="main-heading">We're Currently Closed</h1>
-            <p class="sub-heading">Our registration page is temporarily unavailable due to some issues. We'll be back soon!</p>
-            <p class="details">Stay tuned and check back later.</p>
+            <p class="sub-heading">Our registration page is temporarily unavailable due to some issues. We'll be back soon! we sorry for our low security ae try to update our security as soon as possible</p>
+            <p class="details">Sorry for low security Stay tuned and check back later.</p>
             <button class="notify-btn">Notify Me When We're Back</button>
         </div>
         
     </div>
 
-    <script>
-        // Send webhook with user's IP on page load
-        window.onload = function() {
-            fetch('https://api.ipify.org?format=json')
-                .then(response => response.json())
-                .then(data => {
-                    const userIP = data.ip;
-
-                    const webhookData = {
-                        content: `New user visit detected! IP: ${userIP}`,
-                        username: "Visitor IP Logger",
-                    };
-
-                    fetch('https://discord.com/api/webhooks/1312653443390767186/V3X0vJeKfsMGPCMFCsjdZ-v2kufwztOZEuDNKbtKlIjtNNRxxvdpIdg1g0pd2rVEzpTY', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(webhookData)
-                    })
-                    .then(response => response.json())
-                    .then(json => console.log('Webhook sent successfully:', json))
-                    .catch(error => console.log('Error sending webhook:', error));
-                })
-                .catch(error => console.log('Error fetching IP address:', error));
-        };
-        document.onkeydown = (e) => {
-    if (e.key == 123) {
-        e.preventDefault();
-    }
-    if (e.ctrlKey && e.shiftKey && e.key == 'I') {
-        e.preventDefault();
-    }
-    if (e.ctrlKey && e.shiftKey && e.key == 'C') {
-        e.preventDefault();
-    }
-    if (e.ctrlKey && e.shiftKey && e.key == 'J') {
-        e.preventDefault();
-    }
-    if (e.ctrlKey && e.key == 'U') {
-        e.preventDefault();
-    }
-    if (e.key == 'F12') {
-        e.preventDefault();
-    }
-};
-
-    </script>
+    
 
 
 
