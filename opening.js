@@ -5,8 +5,8 @@
 
 // Configuration
 const config = {
-    jsonBinId: '6730c801ad19ca34f8c785b1',
-    jsonBinApiKey: '$2a$10$ecN6fjgbGla2pDCn7zYV1uaxDxNAQ.8chczGAcSCuGMQAFhPcXhEC', // Add your JSONBin master key here
+    jsonBinId: '674bf7c5ad19ca34f8d373c9',
+    jsonBinApiKey: '$2a$10$2Ek9aJESqmae0JuYhOa7yuEwHkXiJtXhEhNDRQ/.gbdMr0sl2J52e', // Add your JSONBin master key here
     emailJsTemplateId: 'template_dxcjevh' // Add your EmailJS template ID here
 };
 
